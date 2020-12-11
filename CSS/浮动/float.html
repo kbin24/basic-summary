@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动属性</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            float: left;
+        }
+        .box2{
+            width: 150px;
+            height: 150px;
+            background-color: hotpink;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /*这里不会紧靠到box2 因为浮动的盒子只会影响浮动盒子后面的标准流不会影响前面的标准流*/
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵌套块元素垂直外边距的塌陷问题</title>
+    <style>
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            /*此时父元素会距离上边距50px*/
+            margin-top: 50px;
+            /*解决塌陷方法1：给父元素添加上边框*/
+            /* border-top: 1px solid transparent; */
+
+            /*解决塌陷方法2：给父元素添加上内边距*/
+            /* padding-top: 100px; */
+
+            /*解决塌陷方法3：给父元素设置overflow:hidden*/
+            overflow: hidden;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: slateblue;
+            /*我们想让子元素距离父元素的上边距100px 但实际效果并不是我预期所想的那样 而是父元素距离上边距100px 发生这个的原因就是外边距塌陷问题*/
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h4>对于两个嵌套关系(父子关系)的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值</h4>
+    <p>解决方法：</p>
+    <ul>
+        <li>可以为父元素定义上边框</li>
+        <li>可以为父元素定义上内边距</li>
+        <li>可以为父元素添加overflow:hidden</li>
+    </ul>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动案例</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 1226px;
+            height: 614px;
+            background-color: skyblue;
+            margin: 100px auto;
+        }
+
+        .box .left {
+            width: 234px;
+            height: 614px;
+            background-color: salmon;
+            float: left;
+        }
+
+        .box .right {
+            width: 992px;
+            height: 614px;
+            background-color: darkgoldenrod;
+            float: left;
+        }
+
+        .box .right ul li {
+            width: 234px;
+            height: 300px;
+            background-color: darksalmon;
+            margin-left: 14px;
+            float: left;
+        }
+
+        /*选择前4个li*/
+        .box .right ul li:nth-child(-n+4) {
+            margin-bottom: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
