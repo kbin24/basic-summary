@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute定位</title>
+    <style>
+        .content{
+            width: 500px;
+            height: 500px;
+            background-color: orange;
+            position: relative;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: darkgoldenrod;
+            /* position: relative; */
+        }
+        .box1{
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            /*如果父元素没有定位，那么绝对定位相对于根元素进行定位*/
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>绝对定位的元素的位置是相对于其最近的已定位祖先元素，如果元素没有已定位的的祖先元素，那么它相对于根元素进行定位</p>
+    <div class="content">
+        <div class="box">
+            <div class="box1"></div>
+        </div>
+    </div>
+</body>
+
+</html>

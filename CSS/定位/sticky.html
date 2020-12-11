@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sticky定位</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        .nav{
+            width: 800px;
+            height: 50px;
+            position: sticky;
+            /*这里top:0 的意思是：标签滚动到可视窗口顶部之后就不再继续滚动*/
+            top: 10px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">我是导航栏</div>
+</body>
+</html>
