@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标样式cursor</title>
+    <style>
+        li{
+            list-style: none;
+            height: 40px;
+            line-height: 40px;
+        }
+        li:nth-child(2){
+            cursor: pointer;
+        }
+        li:nth-child(3){
+            cursor: move;
+        }
+        li:nth-child(4){
+            cursor: text;
+        }
+        li:last-child{
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>我是默认鼠标样式</li>
+        <li>我是小手鼠标样式</li>
+        <li>我是移动鼠标样式</li>
+        <li>我是文本鼠标样式</li>
+        <li>我是禁止鼠标样式</li>
+    </ul>
+</body>
+</html>

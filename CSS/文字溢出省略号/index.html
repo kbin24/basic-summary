@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字溢出省略</title>
+    <style>
+        div {
+            border: 1px solid gray;
+            width: 100px;
+        
+        }
+
+        /*单行文本超出省略*/
+        .box {
+            /*第一步 限制文字不能换行*/
+            white-space: nowrap;
+            /*第二步 超出部分隐藏*/
+            overflow: hidden;
+            /*第三步 设置省略...符号*/
+            text-overflow: ellipsis;
+        }
+
+        .box1 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        单行文本省略，此处省略一万字1111111111
+    </div>
+    <hr>
+    <div class="box1">
+        多行文本省略，此处省略一万字
+    </div>
+</body>
+
+</html>

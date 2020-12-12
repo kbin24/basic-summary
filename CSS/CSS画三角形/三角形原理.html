@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 三角形制作</title>
+    <style>
+        .box{
+            width: 0;
+            height: 0;
+            margin: 100px auto;
+            border-top: 50px solid darkgoldenrod;
+            border-right: 50px solid green;
+            border-bottom: 50px solid red;
+            border-left: 50px solid pink;
+        }
+        .box1{
+            width: 0;
+            height: 0;
+            margin: 10px auto;
+            border: 50px solid transparent;
+            border-top: 50px solid darkgoldenrod;
+        }
+        .box2{
+            width: 0;
+            height: 0;
+            margin: 10px auto;
+            border: 50px solid transparent;
+            border-left: 50px solid red;
+            border-bottom: 50px solid red;
+        }
+        .box3{
+            position: relative;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .box3 span{
+            position: absolute;
+            border: 10px solid transparent;
+            border-bottom: 10px solid blue;
+            top: -17px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <hr>
+    <div style="text-align: center;">等腰三角形</p>
+    <div class="box1"></div>
+    <hr>
+    <div style="text-align: center;">直角三角形</p>
+    <div class="box2"></div>
+    <hr>
+    <div style="text-align: center;">三角形实例</p>
+    <div class="box3">
+        <span></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin负值的巧妙运用</title>
+    <style>
+        ul li{
+            width: 50px;
+            height: 100px;
+            list-style: none;
+            float: left;
+            border: 1px solid red;
+            /*设置这个属性后，相邻的边框就不会相加变粗，而是会叠加起来，但实际还是1px的边框 */
+            margin-left: -1px;
+        }
+        ul li:hover{
+            z-index: 1;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

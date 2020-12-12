@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical-align解决图片底部默认空白缝隙问题</title>
+    <style>
+        div{
+            border: 1px solid gray;
+        }
+        .box img{
+            vertical-align: bottom;
+        }
+        .box1 img{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h4>
+        bug:图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐
+    </h4>
+    <div>
+        <img src="image/kobe.jpg" alt="">p基线对齐
+    </div>
+    <hr>
+    <h4>
+        解决方法：<br>
+        1.给图片添加vertical-align:middle|top|bottom 属性<br>
+        2.将图片转换为块级元素 display:block
+    </h4>
+    <div class="box">
+        <img src="image/kobe.jpg" alt="">p基线对齐
+    </div>
+    <hr>
+    <div class="box1">
+        <img src="image/kobe.jpg" alt="">
+    </div>
+</body>
+</html>
