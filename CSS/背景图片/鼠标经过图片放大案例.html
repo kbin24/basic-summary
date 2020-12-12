@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标经过图片放大案例</title>
+    <style>
+        div{
+            overflow: hidden;
+        }
+        /*谁做过渡给谁加*/
+        .box img{
+            transition: all 0.3;
+        }
+        .box img:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#">
+            <img src="image/kobe.jpg" alt="">
+        </a>
+    </div>
+</body>
+
+</html>

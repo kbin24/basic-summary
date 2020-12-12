@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition过渡属性</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: burlywood;
+            transition: width 0.7s;
+        }
+        .box:hover{
+            width: 300px;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #f3d9d9;
+            transition: all 0.3s;
+        }
+        .box1:hover{
+           box-shadow: 0 15px 30px rgba(0,0,0,.1);
+           transform: translate3d(0,-2px,0);
+        }
+    </style>
+</head>
+<body>
+    <h3>谁过渡给谁加transition属性</h3>
+    <div class="box"></div>
+    <hr>
+    <div class="box1"></div>
+</body>
+</html>
