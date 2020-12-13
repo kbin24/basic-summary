@@ -1,0 +1,149 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1080px;
+    min-width: 320px;
+    background: gray;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    line-height: 1.5;
+    color:#666;
+    
+}
+
+img{
+    /*清除图片的默认空白缝隙*/
+    vertical-align: top;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+.jd-header{
+    height: 44px;
+    position: relative;
+    overflow: hidden;
+}
+.jd-header .jd-header-btn{
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.jd-header .jd-header-btn::before{
+    display: block;
+    content: "";
+    width: 20px;
+    height: 18px;
+    background: url(../image/jd-header-btn.png) no-repeat;
+    /*手动压缩图片大小*/
+    background-size: 20px 18px;
+    margin: 14px 0px 0px 15px;
+}
+
+.jd-header .jd-search{
+    height: 30px;
+    border-radius: 15px;
+    line-height: 30px;
+    background-color: #fff;
+    position: relative;
+    /*这里设置了一个margin-top:7px;会导致父盒子发生外边距塌陷问题，所以需清除外边距塌陷问题才能得到预期结果，
+    解决方法给父元素添加overflowing:hidden*/
+    margin: 7px 50px;
+}
+
+.jd-header .jd-search .jd-icon{
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: url(../image/jd-logo.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+.jd-icon::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    position: absolute;
+    top: 0;
+    right:-8px;   
+}
+
+.jd-search-icon{
+    width: 18px;
+    height: 15px;
+    background-color: pink;
+    position: absolute;
+    top: 8px;
+    left: 40px;
+    background: url(../image/sprite.png) no-repeat;
+    background-position: -80px 0;
+    background-size: 200px;
+}
+
+.jd-search-input{
+    padding-left: 68px;
+}
+
+.jd-search-input input{
+    border: 0;
+    background: 0 0;
+    font-size: 12px;
+    color: #232326;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    vertical-align: middle;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 0 0 5px;
+    line-height: 16px;
+}
+
+.jd-header .jd-login{
+    width: 40px;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    line-height: 44px;
+}
+
+/*主体内容*/
+.banner img{
+    width: 100%;
+}
+
+/* 品牌日 */
+.brand div{
+    float: left;
+    width: 33.33%;
+}
+.brand div img{
+    width: 100%;
+}
+
+/* nav部分 */
+nav a{
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+nav a img{
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+}
+nav a span{
+    display: block;
+}
