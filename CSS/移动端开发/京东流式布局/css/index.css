@@ -3,7 +3,6 @@ body {
     margin: 0 auto;
     max-width: 1080px;
     min-width: 320px;
-    background: gray;
     font-size: 14px;
     font-family: -apple-system, Helvetica, sans-serif;
     line-height: 1.5;
@@ -21,10 +20,13 @@ a{
     color: #666;
 }
 
+
+
 .jd-header{
     height: 44px;
     position: relative;
     overflow: hidden;
+    background-color: #E43130;
 }
 .jd-header .jd-header-btn{
     width: 40px;
@@ -138,6 +140,7 @@ nav a{
     width: 20%;
     float: left;
     text-align: center;
+    background-color: #fff;
 }
 nav a img{
     width: 40px;
@@ -146,4 +149,18 @@ nav a img{
 }
 nav a span{
     display: block;
+}
+
+/* 商品推荐模块 */
+.jd-goods  div{
+    width: 25%;
+    float: left;
+    background-color: #fff;
+}
+.jd-goods p{
+    color: #222222;
+    margin-left: 10px;
+}
+.jd-goods img{
+    width: 100%;
 }

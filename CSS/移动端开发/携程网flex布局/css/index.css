@@ -1,0 +1,320 @@
+body {
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    background: #fafafc;
+    font: 400 16px/1.5 PingFangSC-regular, Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+    height: 2000px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 头部搜索 */
+
+.search-box {
+    /*固定定位的宽度跟父元素无关 只跟浏览器宽度有关*/
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    /*所以需设置最大最小宽度*/
+    max-width: 540px;
+    min-width: 320px;
+    height: 44px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    /* background-color: tomato; */
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.search-box-index {
+    flex: 1;
+    height: 28px;
+    padding: 2px 5px;
+    line-height: 24px;
+    background-color: #fff;
+    color: #666;
+    font-size: .94rem;
+    border-radius: 28px;
+    position: relative;
+}
+
+.search-box-index span {
+    padding-left: 35px;
+}
+
+.search-box-index span::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../image/sprite.png) no-repeat 15px 7px;
+    background-size: 21px auto;
+}
+
+.login-logo {
+    width: 51px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.75rem;
+    box-sizing: border-box;
+    padding-right: 4px;
+    line-height: 1;
+}
+
+.login-logo a::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: url(../image/sprite.png) no-repeat 1px -36px;
+    background-size: 21px auto;
+    margin-bottom: 1px;
+}
+
+/* 背景图 */
+
+.bg-banner {
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+}
+
+.bg-banner img {
+    width: 100%;
+}
+
+/* 推荐部分 */
+
+.local-nav {
+    position: relative;
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    margin: -32px 12px 10px;
+    padding: 4px 0 8px;
+    z-index: 11;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .08);
+}
+
+.local-nav li {
+    flex: 1;
+}
+
+.local-nav li a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: .75rem;
+    line-height: 1;
+    color: #222222;
+}
+
+.local-nav li a::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../image/nav-sprite.png) no-repeat;
+    background-size: 40px auto;
+}
+
+.local-nav li:first-child a::before {
+    background-position: 0px 0px;
+}
+
+.local-nav li:nth-child(2) a::before {
+    background-position: 0 -40px;
+}
+
+.local-nav li:nth-child(3) a::before {
+    background-position: 0 -80px;
+}
+
+.local-nav li:nth-child(4) a::before {
+    background-position: 0 -120px;
+}
+
+.local-nav li:last-child a::before {
+    background-position: 0 -160px;
+}
+
+/* 主体导航栏 */
+
+nav{
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+nav>div{
+    height: 66px;
+}
+
+
+nav>div:first-child{
+    display: flex;
+    
+}
+
+nav>div:nth-child(2){
+    display: flex;
+}
+
+nav>div:last-child{
+    display: flex;
+}
+
+.fisrt-nav{
+    height: 100%;
+    flex: 0 1 31%;
+    background-color: rosybrown;
+}
+
+.second-nav{
+    flex: 0 1 23%;
+    background-color: darkgoldenrod;
+    box-sizing: border-box;
+    margin: 0px 1px;
+}
+
+.last-nav{
+    flex: 0 1 46%;
+    background-color: skyblue;
+}
+
+.third-nav{
+    flex: 0 1 23%;
+    background-color: slateblue;
+    margin-right: 1px;
+}
+
+.four-nav{
+    flex: 0 1 23%;
+    background-color: rgba(61, 197, 157);
+}
+
+nav>div:nth-child(2){
+    margin: 1px 0;
+}
+
+/* 列表模块 */
+.ul-list::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+.ul-list li{
+    width: 20%;
+    float: left;
+}
+
+.ul-list li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: .63rem;
+    line-height:1;
+    color:#222;
+}
+
+.ul-list li a::before{
+    content: "";
+    display: block;
+    width: 28px;
+    height: 28px;
+    margin-top: 0.63rem;
+    margin-bottom: 0.31rem;
+}
+
+.ul-list li:first-child a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 0;
+    background-size: 28px auto;
+}
+
+.ul-list li:nth-child(2) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 -28px;
+    background-size: 28px auto;
+}
+
+.ul-list li:nth-child(3) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 -56px;
+    background-size: 28px auto;
+}
+
+.ul-list li:nth-child(4) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 -84px;
+    background-size: 28px auto;
+}
+
+
+.ul-list li:nth-child(5) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 -112px;
+    background-size: 28px auto;
+}
+
+.ul-list li:nth-child(6) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 0;
+    background-size: 28px auto;
+}
+
+.ul-list li:nth-child(7) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 -28px;
+    background-size: 28px auto;
+}
+
+.ul-list li:nth-child(8) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 -56px;
+    background-size: 28px auto;
+}
+
+.ul-list li:nth-child(9) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 -84px;
+    background-size: 28px auto;
+}
+
+
+.ul-list li:nth-child(10) a::before{
+    background: url(../image/ul-sprite.png) no-repeat 0 -112px;
+    background-size: 28px auto;
+}
+
+/* 底部 */
+footer{
+    height: 60px;
+    margin-top: 10px;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+}
+
+footer> div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
