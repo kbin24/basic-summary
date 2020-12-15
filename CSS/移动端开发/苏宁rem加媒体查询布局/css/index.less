@@ -1,0 +1,115 @@
+@import "common";
+
+body{
+    min-width: 320px;
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f2f2;
+}
+
+// 头部搜索
+
+@baseFont: 50;
+
+.search-content{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 88rem / @baseFont;
+    background-color: #FFC001;
+    
+    .classify{
+        width: 44rem / @baseFont;
+        height: 70rem / @baseFont;
+        background: url(../image/分类.png) no-repeat;
+        background-size: 44rem / @baseFont 70rem / @baseFont;
+        margin: 10rem / @baseFont;
+    }
+
+    .search-input{
+        flex: 1;
+        input{
+            width: 100%;
+            height: 66rem / @baseFont;
+            border: 0;
+            border-radius: 33rem / @baseFont;
+            background-color: #FFF2cc;
+            margin-top: 12rem / @baseFont;
+            font-size: 25rem / @baseFont;
+            padding-left: 55rem / @baseFont;
+            color: #757575;
+            box-sizing: border-box;
+        }
+    }
+
+    .login{
+        width: 40rem / @baseFont;
+        height: 70rem / @baseFont;
+        margin: 10rem / @baseFont;
+        background: url(../image/登录.png) no-repeat;
+        background-size: 44rem / @baseFont 70rem / @baseFont;
+    }
+}
+
+// banner
+.banner{
+    width: 750rem / @baseFont;
+    height: 368rem / @baseFont;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//ad
+.ad{
+    display: flex;
+    a{
+        flex: 1;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+// nav
+nav{
+    width: 750rem / @baseFont;
+    a{
+        float: left;
+        width: 150rem / @baseFont;
+        height: 142rem / @baseFont;
+        text-align: center;
+        img{
+            display: block;
+            width: 84rem / @baseFont;
+            height: 84rem / @baseFont;
+            margin: 10rem / @baseFont auto 0;
+        }
+        span{
+            color: #333;
+            font-size: 25rem / @baseFont;
+        }
+        // span{
+        //     font-size: 25rem / @baseFont;
+        //     color: #333;
+        // }
+    }
+}
+
+.test{
+    img{
+        display: block;
+        width: 84rem / @baseFont;
+        height: 84rem / @baseFont;
+    }
+    span{
+        font-size: 25rem / @baseFont;
+        color: #333;
+    }
+}
